@@ -1,28 +1,25 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is Kelson's fifth Rails project!
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+What is SocialStock?
+
+The situation:
+
+The CEO of a startup is showing off his stock prototype at an investor meeting in 2-3 days.
+
+The requirements:
+
+1. Authentication system, users can sign-up, edit their profile, login/logout
+2. Users can track stocks, up to 10 stocks per user. The profile page will display all the current stock prices.
+3. Users can search for stock symbols using a search bar.
+4. Users can choose to add a stock from results of search to their portfolio.
+5. Users can look for friends, or other users of the app, by name (first or last or email).
+6. Users can view portfolio of stocks their friends are tracking for investing ideas.
+7. Must be mobile friendly, so the styling has to be responsive.
+
+The restrictions:
+
+1. Needs fast development, styling not of utmost importance but needs to look presentable.
+2. No test framework required at this time since you're building a prototype fast to display at an investor gathering.
+3. What's important is the core functionality, time, and presentation.
+
