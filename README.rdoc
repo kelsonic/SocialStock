@@ -5,7 +5,7 @@ What is SocialStock?
 
 The situation:
 
-The CEO of a startup is showing off his stock prototype at an investor meeting in 2-3 days.
+The CEO of a startup is showing off his stock prototype at an investor meeting in 1 day's time.
 
 The requirements:
 
@@ -23,3 +23,8 @@ The restrictions:
 2. No test framework required at this time since you're building a prototype fast to display at an investor gathering.
 3. What's important is the core functionality, time, and presentation.
 
+
+Start Time: 01/19/2016 9:30AM
+End Time: 01/19/2016 10:15PM
+
+MISSION ACCOMPLISHED!
