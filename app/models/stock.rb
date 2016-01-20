@@ -28,4 +28,12 @@ class Stock < ActiveRecord::Base
     'Unavailable'
   end
   
+  
+  # Realtime Change
+  def change
+    change_realtime = StockQuote::Stock.quote(ticker).change_realtime
+    return "#{change_realtime}" if change_realtime
+    'Unavailable'
+  end
+
 end
