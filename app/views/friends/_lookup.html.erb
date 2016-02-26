@@ -28,12 +28,13 @@
             <% @users.each do |user| %>
               <tr>
                 <td><strong>Name: </strong><%= user.full_name %></td>
+                <% if !current_user.not_friends_with?(user.id) %>
+                  <td><span class="label label-primary">Friend</span></td>
+                <% end %>
                 <td><strong>Email: </strong><%= user.email %></td>
                 <td><strong>Profile: </strong><%= link_to "View Profile", user_path(user), class: "btn btn-primary" %></td>
                 <% if current_user.not_friends_with?(user.id) %>
                   <td><%= link_to "Add Friend", add_friend_path(user: current_user, friend: user), class: "btn btn-success", method: :post %></td>
-                <% else %>
-                  <span class="label label-primary">Friend</span>
                 <% end %>
               </tr>
             <% end %>

@@ -1,8 +1,8 @@
 <div class="panel panel-default">
-  <div class="panel-heading">
-    <h4><%= t('.sign_in', :default => "Sign in") %></h4>
+  <div class="panel-heading text-center">
+    <h4>Login to Continue</h4>
   </div>
-  <div class="panel-body">
+  <div class="panel-body col-lg-6 col-lg-offset-3 col-sm-12">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f| %>
       <div class="form-group">
         <%= f.label :email %>
@@ -20,8 +20,14 @@
           </label>
         </div>
         <% end %>
-      <%= f.submit  t('.sign_in', :default => "Sign in"), class: "btn btn-primary" %>
+      <%= f.submit "Login", class: "btn btn-block btn-primary" %>
+      <hr/>
     <% end %>
   </div>
 </div>
-<%= render "devise/shared/links" %>
+
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

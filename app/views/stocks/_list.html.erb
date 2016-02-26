@@ -2,12 +2,8 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Symbol</th>
-      <th>Current Price</th>
-      <th>Change</th>
-      <% if @user.id == current_user.id %>
-        <th>Actions</th>
-      <% end %>
+      <th>Ticker</th>
+      <th>Price</th>
     </tr>
   </thead>
   <tbody>
@@ -16,17 +12,14 @@
         <td><%= user_stock.name %></td>
         <td><%= user_stock.ticker %></td>
         <td><%= user_stock.price %></td>
-        <% if user_stock.change_realtime.to_i > 0 %>
-          <td><i class="fa fa-arrow-up green"></i><%= user_stock.change_realtime %></td>
-        <% elsif user_stock.change_realtime.to_i < 0 %>
-          <td><i class="fa fa-arrow-down red"></i><%= user_stock.change_realtime %></td>
-        <% else %>
-          <td>Unavailable</td>
-        <% end %>
-        
+        <td>
+          <% if user_stock.change_realtime %>
+            <%= user_stock.change_realtime %>
+          <% end %>
+        </td>
         <% if @user.id == current_user.id %>
           <td>
-            <%= link_to 'Delete', user_stock_path(user_stock), method: :delete, 
+            <%= link_to 'Remove', user_stock_path(user_stock), method: :delete, 
                                             data: { confirm: "Are you sure?" }, 
                                             class: "btn btn-danger" %>
           </td>
